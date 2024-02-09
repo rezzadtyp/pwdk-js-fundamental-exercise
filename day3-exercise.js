@@ -101,4 +101,99 @@ type.
 // let capitalizedString = words.join(" ");
 // console.log(capitalizedString);
 
-let originalString = ""
+//
+
+// let originalString = "hello";
+// let newString = "";
+// for (let i = originalString.length - 1; i >= 0; i--) {
+//   newString += originalString[i];
+// }
+
+// console.log(newString);
+
+//
+
+// const str = 'The QuiCk BrOwN Fox';
+// const UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+// const LOWER = 'abcdefghijklmnopqrstuvwxyz';
+// let result = [];
+
+// for (let i = 0; i < str.length; i++) {
+//   if(UPPER.indexOf(str[i]) !== -1) {
+//     result.push(str[i].toLowerCase());
+//   } else if(LOWER.indexOf(str[i] !== -1)) {
+//     result.push(str[i].toUpperCase());
+//   } else {
+//     result.push(str[i]);
+//   }
+// }
+// console.log(result.join(''));
+
+//
+
+// let num1 = 42;
+// let num2 = 27;
+
+// if (num1 > num2) {
+//   console.log(num1 + " is greater than " + num2);
+// } else {
+//   console.log(num1 + " is lesser than " + num2);
+// }
+
+// let num1 = 42;
+// let num2 = 27;
+// let num3 = 18;
+
+// if (num1 > num2) {
+//   let sort = num1;
+//   num1 = num2;
+//   num2 = sort;
+// }
+
+// if (num1 > num3) {
+//   let sort = num1;
+//   num1 = num3;
+//   num3 = sort;
+// }
+
+// if (num2 > num3) {
+//   let sort = num2;
+//   num2 = num3;
+//   num3 = sort;
+// }
+
+// console.log(num1 + ', ' + num2 + ', ' + num3);
+
+//
+
+// let input = "hello";
+// let result = "";
+
+// if (typeof input === "string") {
+//   result = 1;
+// } else if (typeof input === "number") {
+//   result = 2;
+// } else {
+//   result = 3;
+// }
+
+// console.log(result);
+// console.log(input + " -> " + result);
+
+//
+
+const str = "An apple a day keeps the doctor away";
+const modifiedStr = "*";
+let result = "";
+
+for (let i = 0; i < str.length; i++){
+  if (str[i] === 'a' || str[i] === "A") {
+    result += modifiedStr; // Append '*' character
+  } else {
+    result += str[i];
+  }
+}
+
+console.log(result);
+
+//DONE
