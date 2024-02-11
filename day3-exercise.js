@@ -44,7 +44,7 @@ type.
 
 // const palindrome = "madam";
 // const result = true;
-// const j = palindrome.length - 1;
+// let j = palindrome.length - 1;
 
 // for (let i = 0; i < j; i++) {
 //   if (palindrome[i] !== palindrome[j]) {
