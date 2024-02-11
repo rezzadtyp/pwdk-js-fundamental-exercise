@@ -43,30 +43,18 @@ type.
 // //.2
 
 // const palindrome = "madam";
-
-// for (let i = palindrome.length; i >= 1; i--) {
-//   if (palindrome[i] = palindrome.charAt(palindrome.length) - 1) {
-//     console.log(`${palindrome} is palindrome`);
-//   } else {
-//     console.log(`${palindrome} is not palindrome`);
-//   }
-// }
-
-// const palindrome = "madam";
 // const result = true;
+// const j = palindrome.length - 1;
 
-// for (let i = palindrome.length; i >= 1; i--) {
-//   if (palindrome[i] !== palindrome[palindrome.length - 1 - i]) {
+// for (let i = 0; i < j; i++) {
+//   if (palindrome[i] !== palindrome[j]) {
 //     result = false;
 //     break;
 //   }
+//   j--;
 // }
 
-// if (result) {
-//   console.log(`${palindrome} is a palindrome.`);
-// } else {
-//   console.log(`${palindrome} is not a palindrome.`);
-// }
+// console.log(result === true ? "Palindrome" : "not Palindrome");
 
 // //.3
 
@@ -198,7 +186,7 @@ type.
 
 // for (let i = 0; i < str.length; i++){
 //   if (str[i] === 'a' || str[i] === "A") {
-//     result += modifiedStr; // Append '*' character
+//     result += modifiedStr;
 //   } else {
 //     result += str[i];
 //   }
