@@ -105,11 +105,22 @@ numbers only
 ○ Example : [1,2,3,4,5,6,7,8,9,10] → [2,4,6,8,10]
 */
 
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-const result = numbers.filter((even) => {
-  if (even % 2 === 0) {
-    return even;
-  }
-});
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// const result = numbers.filter((even) => {
+//   if (even % 2 === 0) {
+//     return even;
+//   }
+// });
 
-console.log(result);
+// console.log(result);
+
+// EXERCISE 5
+/*
+Write a function to split a string and convert it into an array of words
+○ Example : “Hello World” → [“Hello”, “World”]
+*/
+
+// const words = "Hello World";
+// const convert = words.split(" ");
+
+// console.log(convert);
