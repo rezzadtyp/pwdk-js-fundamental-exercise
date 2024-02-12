@@ -43,7 +43,7 @@ type.
 // //.2
 
 // const palindrome = "madam";
-// const result = true;
+// let result = true;
 // let j = palindrome.length - 1;
 
 // for (let i = 0; i < j; i++) {
