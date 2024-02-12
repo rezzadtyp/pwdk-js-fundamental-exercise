@@ -215,29 +215,56 @@
 // arr = [10, 20, 40, 10, 50, 30, 10, 60, 10];
 // a. The function will return 40
 
-const arr = [10, 20, 40, 10, 50, 30, 10, 60, 10];
+// const arr = [10, 20, 40, 10, 50, 30, 10, 60, 10];
 
-function sumValues(arr) {
-  const duplicate = [];
-  let sum = 0;
+// function sumValues(arr) {
+//   const duplicate = [];
+//   let sum = 0;
 
-  for (let item of arr) {
-    if (duplicate[item]) {
-      duplicate[item]++;
-    } else {
-      duplicate[item] = 1;
-    }
-  }
-  for (let i = 0; i < duplicate.length; i++) {
-    if (duplicate[i] > 1) {
-      sum += i * duplicate[i];
-    }
-  }
-  return sum;
-}
+//   for (let item of arr) {
+//     if (duplicate[item]) {
+//       duplicate[item]++;
+//     } else {
+//       duplicate[item] = 1;
+//     }
+//   }
+//   for (let i = 0; i < duplicate.length; i++) {
+//     if (duplicate[i] > 1) {
+//       console.log(duplicate[i]);
+//       console.log(i);
+//       sum += i * duplicate[i];
+//     }
+//   }
+//   return sum;
+// }
 
-console.log(sumValues(arr));
+// console.log(sumValues(arr));
 
 // 5. Write a game of rock, paper, scissor function that will return 'Win' or 'Lose'. The function will randomly pick
 // between rock, paper, or scissor.
 // a. Example: if you throw a rock as an argument and the function pick a scissor then it will return 'Win'
+
+
+
+// function playGame(playerMove) {
+//   const pick = ["rock", "paper", "scissors"];
+
+//   const computerMove = pick[Math.floor(Math.random() * pick.length)];
+
+//   if (playerMove === computerMove) {
+//     return "Tie";
+//   } else if (
+//     (playerMove === "rock" && computerMove === "scissors") ||
+//     (playerMove === "paper" && computerMove === "rock") ||
+//     (playerMove === "scissors" && computerMove === "paper")
+//   ) {
+//     return "Win";
+//   } else {
+//     return "Lose";
+//   }
+// }
+
+// console.log(playGame("paper"));
+// console.log(playGame("scissors"));
+// console.log(playGame("rock"))
+
