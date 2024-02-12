@@ -136,6 +136,11 @@ type.
 //   console.log(num1 + " is lesser than " + num2);
 // }
 
+// const num1 = 42;
+// const num2 = 27;
+
+// console.log("The largest number is " + Math.max(num1, num2));
+
 // //.10
 
 // let num1 = 42;
