@@ -42,19 +42,19 @@ type.
 
 // //.2
 
-const palindrome = "madam";
-let result = true;
-let j = palindrome.length - 1;
+// const palindrome = "madam";
+// const result = true;
+// let j = palindrome.length - 1;
 
-for (let i = 0; i < j; i++) {
-  if (palindrome[i] !== palindrome[j]) {
-    result = false;
-    break;
-  }
-  j--;
-}
+// for (let i = 0; i < j; i++) {
+//   if (palindrome[i] !== palindrome[j]) {
+//     result = false;
+//     break;
+//   }
+//   j--;
+// }
 
-console.log(result === true ? "Palindrome" : "not Palindrome");
+// console.log(result === true ? "Palindrome" : "not Palindrome");
 
 // //.3
 
