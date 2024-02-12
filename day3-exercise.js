@@ -54,7 +54,30 @@ type.
 //   j--;
 // }
 
+// //========
+
+// const words = "jogja";
+// let reverse = "";
+
+// for (let i = words.length -1; i >= 0; i--) {
+//   reverse += words[i];
+//   console.log(words[i]);
+// }
+
+// console.log(reverse);
+
 // console.log(result === true ? "Palindrome" : "not Palindrome");
+
+// //.2 build in method
+
+// const words = "madam";
+// const isPalindrome = words === words.split("").reverse().join("");
+
+// console.log(words.split(""));
+// console.log(words.split("").reverse());
+// console.log(words.split("").reverse().join(""));
+
+// console.log(isPalindrome);
 
 // //.3
 
@@ -64,10 +87,22 @@ type.
 // //.4
 
 // const amount = 1000;
-// const formatAmount = amount.toLocaleString('id-ID', {
+// const formatAmount = amount.toLocaleString("id-ID", {
 //   style: "currency",
 //   currency: "IDR"
 // });
+
+// // =====================
+
+// const amount = 1000;
+// const formatAmount = new Intl.NumberFormat("id-ID", {
+//   style: "currency",
+//   currency: "IDR",
+//   maximumFractionDigits: 0,
+// });
+
+// console.log(formatAmount.format(amount));
+
 
 // console.log(formatAmount);
 
@@ -80,6 +115,16 @@ type.
 // if (index !== -1) {
 //   result = originalString.slice(0, index) + originalString.slice(index + searchString.length);
 // }
+
+// // ============== BUILD-IN METHOD
+
+// const words = "Hello World";
+// const search = "ell";
+// const replaceWith = "";
+
+// const remove = words.replace(search, replaceWith);
+
+// console.log(remove);
 
 // console.log(originalString);
 // console.log(result);
@@ -107,6 +152,13 @@ type.
 
 // console.log(newString);
 
+// // ====== build-in method
+
+// const words = "hello";
+// const reverse = words.split("").reverse().join("");
+
+// console.log(reverse);
+
 // //.8
 
 // const str = 'The QuiCk BrOwN Fox';
@@ -124,6 +176,23 @@ type.
 //   }
 // }
 // console.log(result.join(''));
+
+// // ==========
+// const str = "The QuiCk BrOwN Fox";
+// let swapStr = "";
+
+// for (let i = 0; i < str.length; i++) {
+//   const char = str[i];
+
+//   if (char === str[i].toUpperCase()) {
+//     swapStr += char.toLowerCase();
+//   } else {
+//     swapStr += char.toUpperCase();
+//   }
+// }
+
+// console.log(swapStr);
+
 
 // //.9
 
