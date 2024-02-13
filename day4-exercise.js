@@ -17,12 +17,27 @@ following :
 //     for (let j = 1; j <= i; j++) {
 //       x += count.toString().padStart(2, 0) + " ";
 //       count++;
-//     }
+//       }
 //     x += "\n";
 //   }
 //   return x;
 // }
 // console.log(triangle(4));
+//==================================
+// function triangle(height) {
+//   let currentNumber = 1;
+
+//   for (let i = 1; i <= height; i++) {
+//     let row ="";
+
+//     for (let j = 1; j <= i; j++) {
+//       row += (currentNumber < 10 ? "0" : "") + currentNumber + " ";
+//       currentNumber++;
+//     }
+
+//     console.log(row);
+//   }
+// }
 
 // EXERCISE 2
 /* 
@@ -60,6 +75,28 @@ replace multiples of 3 with "Fizz", multiples of 5 with "Buzz", multiples of 3 a
 
 // console.log(totalLooping(15));
 
+//==========================
+
+// function fizzBuzz(n) {
+//   let message = "";
+
+//   for (let i = 1; i <= n; i++) {
+//     if (i % 3 === 0 && i % 5 === 0) {
+//       message += "FizzBuzz" + " ";
+//     } else if (i % 3 === 0) {
+//       message += "Fizz" + " ";
+//     } else if (i % 5 === 0) {
+//       message += "Buzz" + " ";
+//     } else {
+//       message += i + " ";
+//     }
+//   }
+
+//   console.log(message);
+// }
+// fizzBuzz(15);
+
+
 // EXERCISE 3
 /*
 Create a function to calculate Body Mass Index (BMI)
@@ -81,13 +118,13 @@ Create a function to calculate Body Mass Index (BMI)
 
 //   if (bmi < 18.5) {
 //     return "less weight";
-//   }else if (bmi >= 18.5 && bmi < 25) {
+//   } else if (bmi >= 18.5 && bmi < 25) {
 //     return "ideal";
-//   }else if (bmi >= 25 && bmi < 30) {
+//   } else if (bmi >= 25 && bmi < 30) {
 //     return "overweight";
-//   }else if (bmi >= 30 && bmi < 40) {
+//   } else if (bmi >= 30 && bmi < 40) {
 //     return "very overweight";
-//   }else {
+//   } else {
 //     return "obesity";
 //   }
 // }
@@ -97,6 +134,27 @@ Create a function to calculate Body Mass Index (BMI)
 
 // let result = calcBMI(kg,cm);
 // console.log(result);
+
+// ============================
+
+// function calculateBMI(weight, height) {
+//   const bmi = weight / (height * height);
+
+//   console.log(bmi)
+//   if (bmi < 18.5) {
+//     return "less weight";
+//   } else if (bmi >= 18.5 && bmi < 25) {
+//     return "ideal";
+//   } else if (bmi >= 25 && bmi < 30) {
+//     return "overweight";
+//   } else if (bmi >= 30 && bmi < 40) {
+//     return "very overweight";
+//   } else {
+//     return "obesity";
+//   }
+// }
+
+// console.log(calculateBMI(60, 1.75));
 
 // EXERCISE 4
 /*
@@ -114,6 +172,25 @@ numbers only
 
 // console.log(result);
 
+// ======================= tanpa built-in method
+
+// function removeNumber(arr) {
+//   const evenNumbers = [];
+
+//   for (let i = 0; i < arr.length; i++){
+//     if (arr[i] % 2 === 0) {
+//       evenNumbers.push(arr[i]);
+//     }
+//   }
+
+//   return evenNumbers;
+// }
+
+// const inputArr = [1,2,3,4,5,6,7,8,9,10];
+
+// console.log(removeNumber(inputArr));
+
+
 // EXERCISE 5
 /*
 Write a function to split a string and convert it into an array of words
@@ -124,3 +201,34 @@ Write a function to split a string and convert it into an array of words
 // const convert = words.split(" ");
 
 // console.log(convert);
+
+// ============
+
+// function splitString(input) {
+//   return input.split(" ");
+// }
+
+// console.log(splitString("Hello World"));
+
+// ======tanpa built-in method
+
+// const splitString = function (input) {
+//   let kata = [];
+//   let temp = "";
+
+//   for (let i = 0; i < input.length; i++) {
+//     if (input[i] === " ") {
+//       kata.push(temp);
+//       temp = "";
+//       continue;
+//     }
+
+//     temp += input[i];
+//   }
+
+//   kata.push(temp);
+
+//   return kata;
+// }
+
+// console.log(splitString("Hello World"));
