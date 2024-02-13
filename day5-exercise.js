@@ -41,6 +41,23 @@
 
 // console.log(concentenatedString(arr));
 
+// const arr = ["apple", "banana", "cherry", "date"];
+
+// function concStr(fruit) {
+//   if (fruit.length === 0) {
+//     return "";
+//   }
+
+//   const lastWord = fruit.slice(-1);
+//   const otherWords = fruit.slice(0, -1);
+
+//   const result = otherWords.join(",") + (otherWords.length > 0 ? ", and " : "") + lastWord;
+
+//   return result;
+// }
+
+// console.log(concStr(arr));
+
 // 3. Write a function to split a string and convert it into an array of words
 // a. Example : “Hello World” → [“Hello”, “World”]
 
