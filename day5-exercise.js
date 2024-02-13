@@ -270,7 +270,6 @@
 
 // CARA 2
 
-let score = {wins: 0, losses: 0, ties: 0};
 function playGame(playerMove) {
   const computerMove = pickComputerMove();
 
@@ -304,12 +303,13 @@ function playGame(playerMove) {
     }
 
   }
-  
+
   return result;
 }
 
 function pickComputerMove() {
   const randomNumber = Math.random();
+  console.log(randomNumber);
 
   let computerMove = '';
 
