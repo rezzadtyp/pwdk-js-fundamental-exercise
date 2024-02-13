@@ -287,61 +287,61 @@
 
 // CARA 2
 
-function playGame(playerMove) {
-  const computerMove = pickComputerMove();
+// function playGame(playerMove) {
+//   const computerMove = pickComputerMove();
 
-  let result = '';
+//   let result = '';
 
-  if (playerMove === 'scissors') {
-    if (computerMove === 'rock') {
-      result = 'Lose.';
-    } else if (computerMove === 'paper') {
-      result = 'Win.';
-    } else if (computerMove === 'scissors') {
-      result = 'Tie.';
-    }
+//   if (playerMove === 'scissors') {
+//     if (computerMove === 'rock') {
+//       result = 'Lose.';
+//     } else if (computerMove === 'paper') {
+//       result = 'Win.';
+//     } else if (computerMove === 'scissors') {
+//       result = 'Tie.';
+//     }
 
-  } else if (playerMove === 'paper') {
-    if (computerMove === 'rock') {
-      result = 'Win.';
-    } else if (computerMove === 'paper') {
-      result = 'Tie.';
-    } else if (computerMove === 'scissors') {
-      result = 'Lose.';
-    }
+//   } else if (playerMove === 'paper') {
+//     if (computerMove === 'rock') {
+//       result = 'Win.';
+//     } else if (computerMove === 'paper') {
+//       result = 'Tie.';
+//     } else if (computerMove === 'scissors') {
+//       result = 'Lose.';
+//     }
     
-  } else if (playerMove === 'rock') {
-    if (computerMove === 'rock') {
-      result = 'Tie.';
-    } else if (computerMove === 'paper') {
-      result = 'Lose.';
-    } else if (computerMove === 'scissors') {
-      result = 'Win.';
-    }
+//   } else if (playerMove === 'rock') {
+//     if (computerMove === 'rock') {
+//       result = 'Tie.';
+//     } else if (computerMove === 'paper') {
+//       result = 'Lose.';
+//     } else if (computerMove === 'scissors') {
+//       result = 'Win.';
+//     }
 
-  }
+//   }
 
-  return result;
-}
+//   return result;
+// }
 
-function pickComputerMove() {
-  const randomNumber = Math.random();
-  console.log(randomNumber);
+// function pickComputerMove() {
+//   const randomNumber = Math.random();
+//   console.log(randomNumber);
 
-  let computerMove = '';
+//   let computerMove = '';
 
-  if (randomNumber >= 0 && randomNumber < 1 / 3) {
-    computerMove = 'rock';
-  } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
-    computerMove = 'paper';
-  } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
-    computerMove = 'scissors';
-  }
+//   if (randomNumber >= 0 && randomNumber < 1 / 3) {
+//     computerMove = 'rock';
+//   } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
+//     computerMove = 'paper';
+//   } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
+//     computerMove = 'scissors';
+//   }
 
-  return computerMove;
-}
+//   return computerMove;
+// }
 
-console.log(playGame("rock"));
-console.log(playGame("rock"));
-console.log(playGame("rock"));
-console.log(playGame("rock"));
+// console.log(playGame("rock"));
+// console.log(playGame("rock"));
+// console.log(playGame("rock"));
+// console.log(playGame("rock"));
