@@ -289,78 +289,99 @@
 //   }
 //   return sum;
 // }
-
 // console.log(sumValues(arr));
+
+// ========================================================= kak daniel
+
+function sumDupes(arr) {
+  const dupeValues = arr.filter((value, index, array) => {
+    // jadi patokan untuk mengecek di lopping kedua
+    return array.indexOf(value) !== index;
+  });
+  console.log(dupeValues);
+
+  let result = 0; // 10
+  for (let item of arr) {
+    if (dupeValues.includes(item)) {
+      result += item;
+    }
+  }
+  return result;
+}
+const arr = [10, 20, 40, 10, 50, 30, 10, 60, 10];
+console.log(sumDupes(arr));
+
+
 
 // 5. Write a game of rock, paper, scissor function that will return 'Win' or 'Lose'. The function will randomly pick
 // between rock, paper, or scissor.
 // a. Example: if you throw a rock as an argument and the function pick a scissor then it will return 'Win'
 
-// function playGame(playerMove) {
-  //   const computerMove = pickComputerMove();
-  
-  //   let result = '';
-  
-  //   if (playerMove === 'scissors') {
-    //     if (computerMove === 'rock') {
-      //       result = 'Lose.';
-//     } else if (computerMove === 'paper') {
-  //       result = 'Win.';
-//     } else if (computerMove === 'scissors') {
-  //       result = 'Tie.';
-  //     }
-  
-  //   } else if (playerMove === 'paper') {
-    //     if (computerMove === 'rock') {
-      //       result = 'Win.';
-      //     } else if (computerMove === 'paper') {
-//       result = 'Tie.';
-//     } else if (computerMove === 'scissors') {
-  //       result = 'Lose.';
-  //     }
-  
-  //   } else if (playerMove === 'rock') {
-    //     if (computerMove === 'rock') {
-      //       result = 'Tie.';
-      //     } else if (computerMove === 'paper') {
-        //       result = 'Lose.';
-        //     } else if (computerMove === 'scissors') {
-          //       result = 'Win.';
-          //     }
-          
-          //   }
-          
-          //   return result;
-          // }
-          
-          // function pickComputerMove() {
-            //   const randomNumber = Math.random();
-            //   console.log(randomNumber);
-            
-            //   let computerMove = '';
-            
-            //   if (randomNumber >= 0 && randomNumber < 1 / 3) {
-              //     computerMove = 'rock';
-              //   } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
-                //     computerMove = 'paper';
-                //   } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
-                  //     computerMove = 'scissors';
-//   }
+function playGame(playerMove) {
+    const computerMove = pickComputerMove();
 
-//   return computerMove;
-// }
+    let result = '';
 
-// console.log(playGame("rock"));
-// console.log(playGame("rock"));
-// console.log(playGame("rock"));
-// console.log(playGame("rock"));
+    if (playerMove === 'scissors') {
+    if (computerMove === 'rock') {
+      result = 'Lose.';
+    } else if (computerMove === 'paper') {
+      result = 'Win.';
+    } else if (computerMove === 'scissors') {
+      result = 'Tie.';
+    }
+
+    } else if (playerMove === 'paper') {
+    if (computerMove === 'rock') {
+      result = 'Win.';
+    } else if (computerMove === 'paper') {
+      result = 'Tie.';
+    } else if (computerMove === 'scissors') {
+      result = 'Lose.';
+    }
+
+    } else if (playerMove === 'rock') {
+      if (computerMove === 'rock') {
+        result = 'Tie.';
+      } else if (computerMove === 'paper') {
+        result = 'Lose.';
+      } else if (computerMove === 'scissors') {
+        result = 'Win.';
+      }
+
+    }
+
+    return result;
+}
+
+function pickComputerMove() {
+  const randomNumber = Math.random();
+  console.log(randomNumber);
+
+  let computerMove = '';
+
+  if (randomNumber >= 0 && randomNumber < 1 / 3) {
+    computerMove = 'rock';
+  } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
+    computerMove = 'paper';
+  } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
+    computerMove = 'scissors';
+  }
+
+  return computerMove;
+}
+
+console.log(playGame("rock"));
+console.log(playGame("rock"));
+console.log(playGame("rock"));
+console.log(playGame("rock"));
 
 // ==============================================================
 
 // function playGame(playerMove) {
 //   const pick = ["rock", "paper", "scissors"];
 
-//   const computerMove = pick[Math.floor(Math.random() * pick.length)];
+//   const computerMove = pick[Math.floor(Math.random() * 2.9)];
 //   console.log(computerMove);
 
 //   if (playerMove === computerMove) {
