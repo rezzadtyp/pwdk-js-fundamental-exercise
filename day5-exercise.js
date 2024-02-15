@@ -87,6 +87,23 @@
 // }
 // console.log(calcArray(arr1, arr2));
 
+// ================================== cara kak daniel
+
+// const arr1 = [1,2,3,4,6];
+// const arr2 = [1,2,3];
+
+// function calculateStr(arr1, arr2) {
+//   const result = [];
+//   const maxLength = Math.max(arr1.length, arr2.length);
+
+//   for (let i = 0; i < maxLength; i++) {
+//     result.push(arr1[i] || 0 + arr2[i] || 0);
+//   }
+//   return result;
+// }
+
+// console.log(calculateStr(arr1, arr2));
+
 // 5. Write a function that adds an element to the end of an array. However, the element should only be added if it is
 // not already in the array.
 // a. Example : arr = [1, 2, 3, 4], newElement = 4 → [1, 2, 3, 4]
@@ -128,14 +145,32 @@
 
 // const arr = [5, 10, 24, 3, 6, 7, 8];
 
-// function maxSize(maxSize, ...arr) {
+// function arrMaxSize(maxSize, arr) {
 //   if (arr.length > maxSize) {
 //     arr.splice(maxSize);
 //   }
 //   return arr;
 // }
 
-// console.log(maxSize(5, ...arr));
+// console.log(arrMaxSize(5, arr));
+
+// ===================================================================== cara kak daniel
+
+// const max = 5;
+
+// function maxSize(max, ...numbers) {
+//   const result = [];
+
+//   numbers.forEach((item) => {
+//     if (result.length === max) return; // memberhentikan loop
+
+//     result.push(item);
+//   });
+
+//   return result;
+// }
+
+// console.log(maxSize(max, 5, 10, 24, 3, 6, 7, 8));
 
 // 3. Write a function that will combine 2 given array into one array
 // a. Example : arr1 = [1, 2, 3], arr2 = [4, 5, 6] → [1, 2, 3, 4, 5, 6]
@@ -261,12 +296,72 @@
 // between rock, paper, or scissor.
 // a. Example: if you throw a rock as an argument and the function pick a scissor then it will return 'Win'
 
+// function playGame(playerMove) {
+  //   const computerMove = pickComputerMove();
+  
+  //   let result = '';
+  
+  //   if (playerMove === 'scissors') {
+    //     if (computerMove === 'rock') {
+      //       result = 'Lose.';
+//     } else if (computerMove === 'paper') {
+  //       result = 'Win.';
+//     } else if (computerMove === 'scissors') {
+  //       result = 'Tie.';
+  //     }
+  
+  //   } else if (playerMove === 'paper') {
+    //     if (computerMove === 'rock') {
+      //       result = 'Win.';
+      //     } else if (computerMove === 'paper') {
+//       result = 'Tie.';
+//     } else if (computerMove === 'scissors') {
+  //       result = 'Lose.';
+  //     }
+  
+  //   } else if (playerMove === 'rock') {
+    //     if (computerMove === 'rock') {
+      //       result = 'Tie.';
+      //     } else if (computerMove === 'paper') {
+        //       result = 'Lose.';
+        //     } else if (computerMove === 'scissors') {
+          //       result = 'Win.';
+          //     }
+          
+          //   }
+          
+          //   return result;
+          // }
+          
+          // function pickComputerMove() {
+            //   const randomNumber = Math.random();
+            //   console.log(randomNumber);
+            
+            //   let computerMove = '';
+            
+            //   if (randomNumber >= 0 && randomNumber < 1 / 3) {
+              //     computerMove = 'rock';
+              //   } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
+                //     computerMove = 'paper';
+                //   } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
+                  //     computerMove = 'scissors';
+//   }
 
+//   return computerMove;
+// }
+
+// console.log(playGame("rock"));
+// console.log(playGame("rock"));
+// console.log(playGame("rock"));
+// console.log(playGame("rock"));
+
+// ==============================================================
 
 // function playGame(playerMove) {
 //   const pick = ["rock", "paper", "scissors"];
 
 //   const computerMove = pick[Math.floor(Math.random() * pick.length)];
+//   console.log(computerMove);
 
 //   if (playerMove === computerMove) {
 //     return "Tie";
@@ -284,64 +379,3 @@
 // console.log(playGame("paper"));
 // console.log(playGame("scissors"));
 // console.log(playGame("rock"))
-
-// CARA 2
-
-// function playGame(playerMove) {
-//   const computerMove = pickComputerMove();
-
-//   let result = '';
-
-//   if (playerMove === 'scissors') {
-//     if (computerMove === 'rock') {
-//       result = 'Lose.';
-//     } else if (computerMove === 'paper') {
-//       result = 'Win.';
-//     } else if (computerMove === 'scissors') {
-//       result = 'Tie.';
-//     }
-
-//   } else if (playerMove === 'paper') {
-//     if (computerMove === 'rock') {
-//       result = 'Win.';
-//     } else if (computerMove === 'paper') {
-//       result = 'Tie.';
-//     } else if (computerMove === 'scissors') {
-//       result = 'Lose.';
-//     }
-    
-//   } else if (playerMove === 'rock') {
-//     if (computerMove === 'rock') {
-//       result = 'Tie.';
-//     } else if (computerMove === 'paper') {
-//       result = 'Lose.';
-//     } else if (computerMove === 'scissors') {
-//       result = 'Win.';
-//     }
-
-//   }
-
-//   return result;
-// }
-
-// function pickComputerMove() {
-//   const randomNumber = Math.random();
-//   console.log(randomNumber);
-
-//   let computerMove = '';
-
-//   if (randomNumber >= 0 && randomNumber < 1 / 3) {
-//     computerMove = 'rock';
-//   } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
-//     computerMove = 'paper';
-//   } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
-//     computerMove = 'scissors';
-//   }
-
-//   return computerMove;
-// }
-
-// console.log(playGame("rock"));
-// console.log(playGame("rock"));
-// console.log(playGame("rock"));
-// console.log(playGame("rock"));
