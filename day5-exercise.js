@@ -79,7 +79,7 @@
 
 // function calcArray(arr1, arr2) {
 //   const result = [];
-  
+
 //   for (let i = 0; i < arr1.length; i++) {
 //     result.push(arr1[i] + arr2[i]);
 //   }
@@ -206,7 +206,7 @@
 // console.log(duplicate(arr));
 
 // 5. Write a function to find the difference in 2 given array
-// a. Example : arr1 = [1, 2, 3, 4, 5], arr2 = [3, 4, 5, 6, 7] → [1, 2, 6, 7] 
+// a. Example : arr1 = [1, 2, 3, 4, 5], arr2 = [3, 4, 5, 6, 7] → [1, 2, 6, 7]
 
 // const arr1 = [1, 2, 3, 4, 5];
 // const arr2 = [3, 4, 5, 6, 7];
@@ -311,61 +311,56 @@ function sumDupes(arr) {
 const arr = [10, 20, 40, 10, 50, 30, 10, 60, 10];
 console.log(sumDupes(arr));
 
-
-
 // 5. Write a game of rock, paper, scissor function that will return 'Win' or 'Lose'. The function will randomly pick
 // between rock, paper, or scissor.
 // a. Example: if you throw a rock as an argument and the function pick a scissor then it will return 'Win'
 
 function playGame(playerMove) {
-    const computerMove = pickComputerMove();
+  const computerMove = pickComputerMove();
 
-    let result = '';
+  let result = "";
 
-    if (playerMove === 'scissors') {
-    if (computerMove === 'rock') {
-      result = 'Lose.';
-    } else if (computerMove === 'paper') {
-      result = 'Win.';
-    } else if (computerMove === 'scissors') {
-      result = 'Tie.';
+  if (playerMove === "scissors") {
+    if (computerMove === "rock") {
+      result = "Lose.";
+    } else if (computerMove === "paper") {
+      result = "Win.";
+    } else if (computerMove === "scissors") {
+      result = "Tie.";
     }
-
-    } else if (playerMove === 'paper') {
-    if (computerMove === 'rock') {
-      result = 'Win.';
-    } else if (computerMove === 'paper') {
-      result = 'Tie.';
-    } else if (computerMove === 'scissors') {
-      result = 'Lose.';
+  } else if (playerMove === "paper") {
+    if (computerMove === "rock") {
+      result = "Win.";
+    } else if (computerMove === "paper") {
+      result = "Tie.";
+    } else if (computerMove === "scissors") {
+      result = "Lose.";
     }
-
-    } else if (playerMove === 'rock') {
-      if (computerMove === 'rock') {
-        result = 'Tie.';
-      } else if (computerMove === 'paper') {
-        result = 'Lose.';
-      } else if (computerMove === 'scissors') {
-        result = 'Win.';
-      }
-
+  } else if (playerMove === "rock") {
+    if (computerMove === "rock") {
+      result = "Tie.";
+    } else if (computerMove === "paper") {
+      result = "Lose.";
+    } else if (computerMove === "scissors") {
+      result = "Win.";
     }
+  }
 
-    return result;
+  return result;
 }
 
 function pickComputerMove() {
   const randomNumber = Math.random();
   console.log(randomNumber);
 
-  let computerMove = '';
+  let computerMove = "";
 
   if (randomNumber >= 0 && randomNumber < 1 / 3) {
-    computerMove = 'rock';
+    computerMove = "rock";
   } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
-    computerMove = 'paper';
+    computerMove = "paper";
   } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
-    computerMove = 'scissors';
+    computerMove = "scissors";
   }
 
   return computerMove;
