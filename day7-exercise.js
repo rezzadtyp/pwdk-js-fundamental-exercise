@@ -25,13 +25,13 @@
 // object2 = { a: 1 };
 
 // Input 3
-// object1 = { a: 1 };
-// object2 = { a: 1 };
+const object1 = { a: 1 };
+const object2 = { a: 1 };
 
-// const checkEqual = (a, b) => a.a === b.a;
+const checkEqual = (a, b) => a.a === b.a;
 
-// let result = checkEqual(object1, object2);
-// console.log(result);
+let result = checkEqual(object1, object2);
+console.log(result);
 
 // ===============================================================
 // ● Create a function to get the intersection of two objects
@@ -39,22 +39,22 @@
 // ○ Input : { a: 1, b: 2 } & { a: 1, c: 3 }
 // ○ Output: { a: 1 }
 
-const object1 = { a: 1, b: 2 };
-const object2 = { a: 1, c: 3 };
-const intersect = intersection(object1, object2);
+// const object1 = { a: 1, b: 2 };
+// const object2 = { a: 1, c: 3 };
+// const intersect = intersection(object1, object2);
 
-function intersection(o1, o2) {
-  const result = {};
+// function intersection(o1, o2) {
+//   const result = {};
 
-  for (let key in o1) {
-    if (o2.hasOwnProperty(key) && o1[key] === o2[key]) {
-      result[key] = o1[key];
-    }
-  }
-  return result;
-}
+//   for (let key in o1) {
+//     if (o2.hasOwnProperty(key) && o1[key] === o2[key]) {
+//       result[key] = o1[key];
+//     }
+//   }
+//   return result;
+// }
 
-console.log(intersect);
+// console.log(intersect);
 
 // ===============================================================
 // ● Create a function to merge two array of student data and remove duplicate data
@@ -74,6 +74,19 @@ console.log(intersect);
 // { name: ‘Student 2’, email : ‘student2@mail.com’ },
 // { name: ‘Student 3’, email : ‘student3@mail.com’ }
 // ]
+const array1 = [
+  { name: "Student 1", email : "student1@mail.com" },
+  { name: "Student 2", email : "student2@mail.com" }
+  ]
+const array2 = [
+  { name: "Student 1", email : "student1@mail.com" },
+  { name: "Student 3", email : "student2@mail.com" }
+  ]
+
+let names = new Set(array1.map(a => a.name));
+let merged = [...array1, ...array2.filter(a => !names.has(a.name))];
+
+console.log(merged);
 
 // ===============================================================
 // ● Create a function that can accept input as an array of objects and switch all values into property and
@@ -90,11 +103,11 @@ function reverseObject(o) {
       reversed[value] = key;
     }
   }
-  
+
   return reversed;
 }
 
-const object = { name: "David", age: 20 };
+const object = { name: "David", age: "20" };
 const reversedObj = reverseObject(object);
 
 console.log(reversedObj);
