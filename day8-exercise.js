@@ -41,7 +41,7 @@ class Player {
   }
 
   showStatus() {
-    console.log(`${this.name}'s Status - Health: ${this.health}, Power: ${this.power}`);
+    console.log(`${this.name} status - Health ${this.health} Power ${this.power}`);
   }
 }
 
@@ -51,49 +51,69 @@ class ShootingGame {
     this.player2 = player2;
   }
 
-  getRandomItem () {
+  getRandomItem() {
     return {
       health: Math.floor(Math.random() * 1.9) * 10,
       power: Math.floor(Math.random() * 1.9) * 10,
     }
+  //   let healthRNG = Math.floor(Math.random() * 1.9);
+  //   let powerRNG = Math.floor(Math.random() * 1.9);
+  //   const itemStat = { health: 0, power: 0 };
+  //   console.log(healthRNG);
+  //   console.log(powerRNG);
+  //   if (healthRNG === 0) {
+  //     itemStat.health = 0;
+  //   } else if (healthRNG === 1) {
+  //     itemStat.health = 10;
+  //   }
+  //   if (powerRNG === 0) {
+  //     itemStat.power = 0;
+  //   } else if (powerRNG === 1) {
+  //     itemStat.power = 10;
+  //   }
+  //   console.log(itemStat);
+  //   return itemStat;
+  // }
   }
-
+  
+  
 
   start() {
-    for (
-      let currentPlayer = this.player1, otherPlayer = this.player2;
-      this.player1.health > 0 && this.player2.health > 0;
-      [currentPlayer, otherPlayer] = [otherPlayer, currentPlayer]
-    ) {
-      console.log("Current turn: ", currentPlayer.name);
+    let currentPlayer = this.player1;
+    let otherPlayer = this.player2;
+
+    while (this.player1.health > 0 && this.player2.health > 0) {
+      console.log(`Current turn: ${currentPlayer.name}`);
       currentPlayer.showStatus();
       otherPlayer.showStatus();
 
-      const itemForCurrentPlayer = this.getRandomItem;
-      const itemForOtherPlayer = this.getRandomItem;
-
-      console.log(`${currentPlayer.name} gets an item: `, itemForCurrentPlayer);
-      console.log(`${otherPlayer.name} gets an item: `, itemForOtherPlayer);
+      const itemForCurrentPlayer = this.getRandomItem();
+      const itemForOtherPlayer = this.getRandomItem();
+      
+      console.log(itemForCurrentPlayer);
+      console.log(itemForOtherPlayer);
 
       currentPlayer.useItem(itemForCurrentPlayer);
       otherPlayer.useItem(itemForOtherPlayer);
+
 
       currentPlayer.showStatus();
       otherPlayer.showStatus();
 
       otherPlayer.hit(currentPlayer.power);
+
+      [currentPlayer, otherPlayer] = [otherPlayer, currentPlayer];
     }
-
     const winner = this.player1.health > 0 ? this.player1.name : this.player2.name;
-    console.log(`Winner is ${winner}`);
+    console.log(`Winner ${winner}`);
   }
-}
+};
 
-const player1 = new Player("Farhan Kebab");
-const player2 = new Player("Asep Stroberi");
+
+const player1 = new Player("Dadang Rosikin");
+const player2 = new Player("Batak perantau");
 const game = new ShootingGame(player1, player2);
 game.start();
-
 
 // Exercise - Employee Salary
 // ● Specifications :
