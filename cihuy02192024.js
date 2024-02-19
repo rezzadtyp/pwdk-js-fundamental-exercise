@@ -1,5 +1,4 @@
-console.log("day 8");
-
+// Exercise - Shooting Game
 // Specifications :
 // ○ Create a shooting game between two player
 // ○ Each player has three properties : name, health and power
@@ -41,7 +40,7 @@ class Player {
   }
 
   showStatus() {
-    console.log(`${this.name}'s Status - Health: ${this.health}, Power: ${this.power}`);
+    console.log(`${this.name} status - Health ${this.health} Power ${this.power}`);
   }
 }
 
@@ -51,57 +50,78 @@ class ShootingGame {
     this.player2 = player2;
   }
 
-  getRandomItem () {
+  getRandomItem() {
     return {
       health: Math.floor(Math.random() * 1.9) * 10,
       power: Math.floor(Math.random() * 1.9) * 10,
     }
+  //   let healthRNG = Math.floor(Math.random() * 1.9);
+  //   let powerRNG = Math.floor(Math.random() * 1.9);
+  //   const itemStat = { health: 0, power: 0 };
+  //   console.log(healthRNG);
+  //   console.log(powerRNG);
+  //   if (healthRNG === 0) {
+  //     itemStat.health = 0;
+  //   } else if (healthRNG === 1) {
+  //     itemStat.health = 10;
+  //   }
+  //   if (powerRNG === 0) {
+  //     itemStat.power = 0;
+  //   } else if (powerRNG === 1) {
+  //     itemStat.power = 10;
+  //   }
+  //   console.log(itemStat);
+  //   return itemStat;
+  // }
   }
-
+  
+  
 
   start() {
-    for (
-      let currentPlayer = this.player1, otherPlayer = this.player2;
-      this.player1.health > 0 && this.player2.health > 0;
-      [currentPlayer, otherPlayer] = [otherPlayer, currentPlayer]
-    ) {
-      console.log("Current turn: ", currentPlayer.name);
+    let currentPlayer = this.player1;
+    let otherPlayer = this.player2;
+
+    while (this.player1.health > 0 && this.player2.health > 0) {
+      console.log(`Current turn: ${currentPlayer.name}`);
       currentPlayer.showStatus();
       otherPlayer.showStatus();
 
-      const itemForCurrentPlayer = this.getRandomItem;
-      const itemForOtherPlayer = this.getRandomItem;
-
-      console.log(`${currentPlayer.name} gets an item: `, itemForCurrentPlayer);
-      console.log(`${otherPlayer.name} gets an item: `, itemForOtherPlayer);
+      const itemForCurrentPlayer = this.getRandomItem();
+      const itemForOtherPlayer = this.getRandomItem();
+      
+      console.log(itemForCurrentPlayer);
+      console.log(itemForOtherPlayer);
 
       currentPlayer.useItem(itemForCurrentPlayer);
       otherPlayer.useItem(itemForOtherPlayer);
+
 
       currentPlayer.showStatus();
       otherPlayer.showStatus();
 
       otherPlayer.hit(currentPlayer.power);
+
+      [currentPlayer, otherPlayer] = [otherPlayer, currentPlayer];
     }
-
     const winner = this.player1.health > 0 ? this.player1.name : this.player2.name;
-    console.log(`Winner is ${winner}`);
+    console.log(`Winner ${winner}`);
   }
-}
+};
 
-const player1 = new Player("Farhan Kebab");
-const player2 = new Player("Asep Stroberi");
+
+const player1 = new Player("Dadang Rosikin");
+const player2 = new Player("Batak perantau");
 const game = new ShootingGame(player1, player2);
 game.start();
 
-
-// Exercise - Employee Salary
+// Exercise - Salary
 // ● Specifications :
 // ○ Create a program to calculate total salary based on employee type
 // ○ There are two types of employee : full-time & part-time
 // ○ Salary for full-time employee :
 // ■ IDR 100.000 / hour
 // ■ IDR 75.000 / hour, if the number of working hours per day is more than 6 hours
+//expected output working hours(7) = 675.000
 // ○ Salary for part-time employee :
 // ■ IDR 50.000 / hour
 // ■ IDR 30.000 / hour, if the number of working hours per day is more than 6 hours
@@ -112,56 +132,55 @@ game.start();
 // ■ Create a method in that class to calculate total salary
 // ○ Use inheritance concept
 
-
-// class Employee {
-//   constructor(baseSalary) {
-//     this.baseSalary = baseSalary;
-//     this.workingHours = 0;
-//   }
+class Employee {
+  constructor(baseSalary) {
+    this.baseSalary = baseSalary;
+    this.workingHours = 0;
+  }
   
-//   addWorkingHours(hours) {
-//     this.workingHours += hours;
-//   }
+  addWorkingHour(hours) {
+    this.workingHours += hours;
+  }
 
-//   calculateSalary() {
-//     return this.baseSalary;
-//   }
-// }
+  calculateSalary () {
+    return this.baseSalary;
+  }
+}
 
-// class FullTimeEmployee extends Employee {
-//   constructor(baseSalary, overtimeSalary) {
-//     super(baseSalary);
-//     this.overtimeSalary = overtimeSalary;
-//   }
+class FullTimeEmployee extends Employee {
+  constructor(baseSalary, overtimeSalary) {
+    super(baseSalary);
+    this.overtimeSalary = overtimeSalary;
+  }
 
-//   calculateSalary() {
-//     if (this.workingHours > 6) {
-//       return (6 * this.baseSalary) + ((this.workingHours - 6) * this.overtimeSalary);
-//     } else {
-//       return this.baseSalary * this.workingHours;
-//     }
-//   }
-// }
+  calculateSalary() {
+    if (this.workingHours >= 6) {
+      return (this.baseSalary * 6) + ((this.workingHours - 6) * this.overtimeSalary)
+    } else {
+      return this.baseSalary * this.workingHours;
+    }
+  }
+}
 
-// class PartTimeEmployee extends Employee {
-//   constructor(baseSalary, overtimeSalary) {
-//     super(baseSalary);
-//     this.overtimeSalary = overtimeSalary
-//   }
+class PartTimeEmployee extends Employee {
+  constructor(baseSalary, overtimeSalary) {
+    super(baseSalary);
+    this.overtimeSalary = overtimeSalary;
+  }
 
-//   calculateSalary() {
-//     if (this.workingHours > 6) {
-//       return (6 * this.baseSalary) + ((this.workingHours - 6) * this.overtimeSalary);
-//     } else {
-//       return this.baseSalary * this.workingHours;
-//     }
-//   }
-// }
+  calculateSalary() {
+    if (this.workingHours >= 6) {
+      return (this.baseSalary * 6) + ((this.workingHours - 6) * this.overtimeSalary)
+    } else {
+      return this.baseSalary * this.workingHours;
+    }
+  }
+}
 
-// const fullTime = new FullTimeEmployee(100000,75000);
-// fullTime.addWorkingHours(7);
-// console.log(fullTime.calculateSalary());
+const fullTime = new FullTimeEmployee(100000, 75000);
+fullTime.addWorkingHour(7);
+console.log(fullTime.calculateSalary());
 
-// const partTime = new PartTimeEmployee(50000, 30000);
-// partTime.addWorkingHours(8);
-// console.log(partTime.calculateSalary());
+const partTime = new PartTimeEmployee(50000, 30000);
+partTime.addWorkingHour(7);
+console.log(partTime.calculateSalary());
