@@ -28,7 +28,7 @@ const date2 = new Date("2022-01-22");
 
 const difference = date2 - date1;
 console.log(difference / (24 * 3600 * 1000));
-/*
+
 function convertDays(numberOfDays) {
   let years = Math.floor(numberOfDays / 365);
   let months = Math.floor((numberOfDays % 365) / 30);
@@ -50,21 +50,21 @@ const numberOfDays2 = 366;
 const result2 = convertDays(numberOfDays2);
 
 console.log(`${result2.years} years, ${result2.months} months, ${result2.days} days.`);
-*/
-
-let numberOfDays1 = 400;
-let years1 = Math.floor(numberOfDays1 / 365);
-let months1 = Math.floor((numberOfDays1 % 365) / 30);
-let days1 = Math.floor(numberOfDays1 % 365 % 30);
-let result1 = `${years1} years, ${months1} months, ${days1} days.`;
-
-console.log(result1);
 
 
-let numberOfDays2 = 366;
-let years2 = Math.floor(numberOfDays2 / 365);
-let months2 = Math.floor((numberOfDays2 % 365) / 30);
-let days2 = Math.floor(numberOfDays2 % 365 % 30);
-let result2 = `${years2} years, ${months2} months, ${days2} days.`;
+// let numberOfDays1 = 400;
+// let years1 = Math.floor(numberOfDays1 / 365);
+// let months1 = Math.floor((numberOfDays1 % 365) / 30);
+// let days1 = Math.floor(numberOfDays1 % 365 % 30);
+// let result1 = `${years1} years, ${months1} months, ${days1} days.`;
 
-console.log(result2);
+// console.log(result1);
+
+
+// let numberOfDays2 = 366;
+// let years2 = Math.floor(numberOfDays2 / 365);
+// let months2 = Math.floor((numberOfDays2 % 365) / 30);
+// let days2 = Math.floor(numberOfDays2 % 365 % 30);
+// let result2 = `${years2} years, ${months2} months, ${days2} days.`;
+
+// console.log(result2);
